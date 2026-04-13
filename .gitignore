@@ -1,0 +1,28 @@
+# Large local-only assets
+/wiki_unigrams.bin
+/Copy of wiki_unigrams-002.bin
+/docs/assets/wiki_unigrams.bin
+/In ReproNLP-*.zip
+/docs/reference/memsum_software.zip
+
+# Drive snapshot and cloned upstream repo
+/gdrive_sync/
+/external/MemSum/
+
+# Large extracted demo artifacts
+/external/memsum_demo/data/
+/external/memsum_demo/model/
+
+# Python and notebook noise
+**/__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local credentials
+.env
+.env.local
+.github.env
