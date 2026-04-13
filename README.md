@@ -1,15 +1,38 @@
-# Project Overview 
-(we can change/add/remove to this)<br>
-- Option 2: ReproNLP 2026 — Reproducibility of NLP Evaluations
-- Workshop: GEM 2026 — 5th Generation, Evaluation & Metrics Workshop (ReproNLP Track)
-- Registration Deadline: March 23, 2026
-- Report Submission Deadline: ***April 23, 2026***
-- Website: https://repronlp.github.io/
+# FinalProject
 
-Task Description
-ReproNLP is a shared task focused on the reproducibility of evaluations in NLP, running for its sixth consecutive year. The goal is to select a previously published NLP evaluation study, attempt to reproduce its results, and write a detailed report analyzing what you found — whether results reproduced, what challenges arose, and what this means for NLP evaluation methodology. Two tracks are available:
+Group workspace for the CSCI-490 NLP final project: reproducing the MemSum
+human-evaluation workflow from ReproNLP 2026.
 
-Track B (ReproHum Track): Select from a curated set of evaluation studies provided by the ReproHum Project. You receive detailed instructions, data, and tools. Repeat the study and attempt to reproduce the original results.
+## Repo Layout
 
-Overview
-Your group will select and reproduce a published NLP evaluation, then write an 8-page analysis report. This option teaches experimental methodology, evaluation design, and scientific writing without requiring a novel research contribution. The structured format (especially Track B) provides clear guidance, making this an excellent choice for groups newer to research.
+- `notebooks/`
+  Colab notebooks used for the four annotator copies of the MemSum evaluation.
+- `data/human_eval/`
+  Human-evaluation JSONL files used by the notebooks.
+- `docs/instructions/`
+  ReproNLP evaluator and team instructions plus the notebook assignment sheet.
+- `docs/reference/`
+  Paper, interface reference image, notes from the public materials, and the
+  shared report outline.
+- `external/memsum_demo/`
+  Extracted MemSum demo code and lightweight reference files from the public
+  software package.
+
+## Working Notes
+
+- The four notebooks are annotator-specific copies of the same evaluation
+  workflow, not four different reproduction tasks.
+- The notebook named `Copy of MemSum_Human_Evaluation_1.ipynb` is kept because
+  the evaluation code derives the annotator ID from the notebook filename.
+- Large local-only assets are intentionally not tracked in git. That includes
+  `wiki_unigrams.bin`, archive dumps, the exact Drive snapshot, and large model
+  or dataset artifacts pulled from the public software bundle.
+
+## Getting Missing Files
+
+- `wiki_unigrams.bin` still needs to be shared outside git because it is about
+  5 GB and GitHub will not accept it.
+- If you need the original upstream MemSum repo, clone
+  `https://github.com/nianlonggu/MemSum.git` into `external/MemSum/`.
+- If you need the full Drive-style folder dump or large archive copies, use the
+  shared course Drive rather than this repo.
