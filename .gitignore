@@ -21,3 +21,8 @@
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local credentials
+.env
+.env.local
+.github.env
